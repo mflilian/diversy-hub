@@ -43,7 +43,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
-import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 @NgModule({
   exports: [
@@ -91,7 +90,6 @@ import { MatPasswordStrengthModule } from '@angular-material-extensions/password
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    MatPasswordStrengthModule
   ],
 })
 export class MaterialModule {}
