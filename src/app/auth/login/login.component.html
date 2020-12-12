@@ -1,26 +1,65 @@
-<form [formGroup]="loginForm" class="bridge-form" (ngSubmit)="onLogin()">
-    <div>
-        <div class="bridge-form-item form-group">
-            <div>
-                <label class="active " for="email ">Seu email</label>
-                <input id="email " type="text " class="login-form-input form-control " placeholder="Insira seu email " name="email" ngModel required formControlName="email">
-            </div>
-            <div class="login-form-item form-group">
-                <label class="active" for="password">Sua senha</label>
-                <div class="input-group">
-                    <input [type]="fieldTextType ? 'text' : 'password'" id="password" type="password" class="login-form-input form-control" placeholder="Insira sua senha" name="password" ngModel required formControlName="password">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            <span class="material-icons" (click)="toggleFieldTextType()">
-                                {{changeIcon()}}
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+<div class="screen__container">
+    <div class="login_background__container">
+        <div class="login_background__logo">
+            <img src="../../../assets/auth/logo.png" alt="">
         </div>
-        <div class="bridge-button-container">
-            <button type="submit" [disabled]="!loginForm.valid" ref="" class="btn btn-info">Iniciar Denúncia</button>
+        <div class="welcome__container">
+            <img class="welcome__img" src="../../../assets/auth/welcome.png" alt="">
+            <div class="welcome__diagonal">
+                <h3 class="welcome__text">Olá, bem-vinde!
+                </h3>
+            </div>
+            <div class="welcome__subtitle">
+                <h6>
+                    Vem somar com a gente nessa jornada em busca de progresso profissional e diversidade dentro do mercado de trabalho! Cadastre-se ou efetue seu login!
+                </h6>
+            </div>
         </div>
     </div>
-</form>
+    <div class="form__container">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="form__user_img">
+                <img src="../../../assets/auth/user.png" alt="">
+            </div>
+            <div>
+                <div class="form-group">
+                    <div class="form-group form_input__container">
+                        <!-- <label class="active " for="email ">Seu email</label> -->
+                        <div class="input-group">
+                            <input id="email " type="text " class="form_input form-control " placeholder="EMAIL" name="email" ngModel required formControlName="email">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <span class="material-icons">
+                                        person
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form_input__container">
+                        <!-- <label class="active" for="password">Sua senha</label> -->
+                        <div class="input-group">
+                            <input [type]="fieldTextType ? 'text' : 'password'" id="password" type="password" class="form_input form-control" placeholder="SENHA" name="password" ngModel required formControlName="password">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <span class="material-icons" (click)="toggleFieldTextType()">
+                                        {{changeIcon()}}
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button__container">
+                    <button type="submit" [disabled]="!loginForm.valid" ref="" class="btn btn-info">Entrar</button>
+                </div>
+            </div>
+        </form>
+        <div class="signup__container">
+            <h4>Ainda não é cadastrado?</h4>
+            <a href="">
+                <h5>Cadastre-se agora</h5>
+            </a>
+        </div>
+    </div>
+</div>

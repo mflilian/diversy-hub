@@ -31,7 +31,12 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(){
-    this.authService.signIn(this.loginForm.value.email, this.loginForm.value.password);
+    console.log('oi')
+    this.authService.signIn(this.loginForm.value.email, this.loginForm.value.password).subscribe(
+      res => {
+        console.log(res)
+      }
+    );
   }
 
   toggleFieldTextType() {

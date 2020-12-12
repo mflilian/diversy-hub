@@ -1,0 +1,127 @@
+.form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.form_input {
+    border-radius: 30px;
+}
+
+.form_input__container {
+    margin-top: 10px;
+}
+
+.input-group-text {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.btn {
+    background: #563883;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.button__container {
+    display: flex;
+    justify-content: center;
+}
+
+.login_background__container {
+    background: url('../../../assets/auth/image\ 4\ \(2\).png');
+    background-size: cover;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.screen__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.login_background__logo {
+    img {
+        width: 300px;
+        margin: 20px;
+    }
+}
+
+.welcome__diagonal {
+    background: rgba(199, 169, 247, 0.8);
+    opacity: 0.7;
+    border-radius: 30px;
+    width: 400px;
+    height: 140px;
+    -webkit-transform: skew(-39deg);
+    /* Chrome, Opera */
+    -ms-transform: skew(-39deg);
+    /* IE */
+    transform: skew(-39deg);
+    /* Padrão */
+}
+
+.welcome__text {
+    transform: skew(39deg);
+    text-align: center;
+    font-size: 65px;
+    color: #433577;
+    line-height: 72px;
+    letter-spacing: -0.01em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.welcome__img {
+    height: 300px;
+    margin-top: -50px;
+}
+
+.welcome__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    h6 {
+        font-size: 25px;
+        line-height: 47px;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+    }
+}
+
+.signup__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    h4 {
+        color: #626161;
+        font-size: 22px;
+    }
+    a {
+        text-decoration: none;
+        color: #960000;
+        h5 {
+            font-size: 22px;
+        }
+    }
+}
+
+.form__user_img {
+    display: flex;
+    justify-content: center;
+}

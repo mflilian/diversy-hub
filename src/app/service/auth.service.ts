@@ -18,9 +18,10 @@ export class AuthService {
   ) { }
 
   signIn(email: string, password: string): Observable<any> {
-    const url = environment.backend.url + 'login';
+    const url = '/api/candidates/login';
     return this.http.post<any>(url, {email, password}).pipe(
       map((res: string) => {
+        console.log('oie')
         localStorage.setItem('token','Bearer'+ res);
         return res;
       }),

@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
   backend: {
-    url: "localhost:1234/"
+    url: "https://diversyhub.herokuapp.com/"
   }
 };
