@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  fieldTextType: boolean;
+
 
   constructor(
     private fb: FormBuilder,
@@ -28,8 +30,22 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  login(){
+  onLogin(){
     this.authService.signIn(this.loginForm.value.email, this.loginForm.value.password);
+  }
+
+  toggleFieldTextType() {
+    this.fieldTextType = !this.fieldTextType;
+    this.changeIcon();
+  }
+
+  changeIcon() {
+    if(this.fieldTextType) {
+      return "visibility"
+    }
+    else{
+      return "visibility_off"
+    }
   }
 
 }

@@ -1,3 +1,4 @@
+import { AuthRoutingModule } from './auth/auth-routing.module';
 import { MaterialModule } from './material.module';
 import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AuthModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AuthRoutingModule,
+    HttpClientModule,
+
   ],
   exports:[
     MaterialModule

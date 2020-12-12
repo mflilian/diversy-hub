@@ -1,1 +1,26 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" class="bridge-form" (ngSubmit)="onLogin()">
+    <div>
+        <div class="bridge-form-item form-group">
+            <div>
+                <label class="active " for="email ">Seu email</label>
+                <input id="email " type="text " class="login-form-input form-control " placeholder="Insira seu email " name="email" ngModel required formControlName="email">
+            </div>
+            <div class="login-form-item form-group">
+                <label class="active" for="password">Sua senha</label>
+                <div class="input-group">
+                    <input [type]="fieldTextType ? 'text' : 'password'" id="password" type="password" class="login-form-input form-control" placeholder="Insira sua senha" name="password" ngModel required formControlName="password">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <span class="material-icons" (click)="toggleFieldTextType()">
+                                {{changeIcon()}}
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bridge-button-container">
+            <button type="submit" [disabled]="!loginForm.valid" ref="" class="btn btn-info">Iniciar Denúncia</button>
+        </div>
+    </div>
+</form>
