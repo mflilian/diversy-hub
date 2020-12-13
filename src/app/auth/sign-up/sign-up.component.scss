@@ -1,0 +1,11 @@
+@import '../login/login.component.scss';
+.radio_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+form {
+    width: 50%;
+}

@@ -30,4 +30,32 @@ export class AuthService {
       })
     )
   }
+
+  signUp(checker: string, name: string, email: string, password: string): Observable<any> {
+    let data;
+    let url;
+    if(checker == '1'){
+      url = '/api/candidates/';
+      data = {
+        nomeCompleto: name,
+        email: email,
+        password: password
+      }
+    } else {
+      url = '/api/empresas/';
+      data = {
+        name: name,
+        email: email,
+        password: password
+      }
+    }
+    return this.http.post<any>(url, data).pipe(
+      map((res: string) => {
+        return res;
+      }),
+      catchError(err => {
+        return throwError(err)
+      })
+    )
+  }
 }
